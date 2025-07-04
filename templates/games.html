@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Games for {{ season }}</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    th {
+      background-color: #3498db;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Game Results - Season {{ season }}</h1>
+  <table>
+    <tr>
+      <th>Date</th><th>Home Team</th><th>Visitor Team</th>
+      <th>Home Score</th><th>Visitor Score</th>
+      <th>Winner</th><th>Margin</th>
+    </tr>
+    {% for game in game_results %}
+    <tr>
+      <td>{{ game.date }}</td>
+      <td>{{ game.home_team }}</td>
+      <td>{{ game.visitor_team }}</td>
+      <td>{{ game.home_score }}</td>
+      <td>{{ game.visitor_score }}</td>
+      <td>{{ game.winner }}</td>
+      <td>{{ game.margin }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

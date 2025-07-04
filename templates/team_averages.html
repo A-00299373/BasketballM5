@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Average Team Scores - {{ season }}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f6fc;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      color: #34495e;
+    }
+    table {
+      margin: auto;
+      width: 90%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    th {
+      background-color: #2980b9;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Average Team Scores - Season {{ season }}</h1>
+  <table>
+    <tr>
+      <th>Team</th>
+      <th>Games Played</th>
+      <th>Total Score</th>
+      <th>Average Score</th>
+      <th>Wins</th>
+      <th>Winning %</th>
+    </tr>
+    {% for team in avg_scores %}
+    <tr>
+      <td>{{ team.team }}</td>
+      <td>{{ team.games_played }}</td>
+      <td>{{ team.total_score }}</td>
+      <td>{{ team.average_score }}</td>
+      <td>{{ team.wins }}</td>
+      <td>{{ team.win_pct }}%</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
