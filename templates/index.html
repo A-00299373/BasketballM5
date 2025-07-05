@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BallDon API</title>
+  <title>BallDontLie API</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -33,15 +33,19 @@
       border-radius: 10px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.15);
     }
+    .logo {
+      width: 300px;
+      margin-bottom: 30px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Welcome to the BallDon API!</h1>
+    <img src="/static/HomeLogo.png" alt="BallDon Logo" class="logo">
+    <h1>Welcome to the BallDontLie API!</h1>
     <p>To see players: <a href="/allplayers">/allplayers</a></p>
     <p>To see game results for a season, go to /games/&lt;season&gt; (e.g., <a href="/games/2018">/games/2018</a>)</p>
     <p>To see average team performance for a season, go to /team-averages/&lt;season&gt; (e.g., <a href="/team-averages/2018">/team-averages/2018</a>)</p>
-    <p>To see average team performance for a season, go to: <a href="/team-averages/2018">/team-averages/&lt;season&gt;</a></p>
   </div>
 </body>
 </html>
