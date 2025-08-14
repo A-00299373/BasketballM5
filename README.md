@@ -41,6 +41,3 @@ The app renders HTML with **Jinja2** templates and serves a logo from `/static`.
 - **Uvicorn** ASGI server
 
 ---
-
-## 📁 Project Structure
-
